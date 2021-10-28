@@ -8,7 +8,7 @@
 let userInfo = {
 	name: 'Patrik',
 	age: 20,
-	city: 'USA',
+	country: 'USA',
 }
 
 function getObj(userInfo) {
