@@ -14,11 +14,11 @@
 // Вывести в консоль
 
 function Devices(name) {
-	this.color = 'white',
-		this.name = name
+	this.color = 'white';
+	this.name = name
 }
 
-let totalPower = 0
+let totalPower = 0;
 Devices.prototype.turnOn = function () {
 	totalPower += this.power;
 	console.log(`${this.name} is on.`);
@@ -32,25 +32,25 @@ Devices.prototype.turnOff = function () {
 }
 
 function GameDevice(name, power, gamepad) {
-	this.color = 'white',
-		this.name = name,
-		this.power = power,
-		this.gamepad = gamepad,
-		this.takeInfoPS = function (gamepad) {
-			console.log(`${this.name}, power - ${this.power}V. There are ${gamepad} gamepads`);
+	this.color = 'white';
+	this.name = name;
+	this.power = power;
+	this.gamepad = gamepad;
+	this.takeInfoPS = function (gamepad) {
+		console.log(`${this.name}, power - ${this.power}V. There are ${gamepad} gamepads`);
 		}
 }
 
 GameDevice.prototype = new Devices();
 
 function TVDevice(name, power) {
-	this.color = 'white',
-		this.power = power,
-		this.name = name,
-		this.smartTV = 'smartTV',
-		this.package = 'Okko Premium Subscription',
-		this.takeInfoTV = function () {
-			console.log(`${this.name} has ${this.smartTV} support. Power - ${this.power}V. ${this.package} package connected`);
+	this.color = 'white';
+	this.power = power;
+	this.name = name;
+	this.smartTV = 'smartTV';
+	this.package = 'Okko Premium Subscription';
+	this.takeInfoTV = function () {
+		console.log(`${this.name} has ${this.smartTV} support. Power - ${this.power}V. ${this.package} package connected`);
 		}
 }
 
